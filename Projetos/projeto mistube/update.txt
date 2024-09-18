@@ -1,0 +1,16 @@
+MISTUBE 2.O.3
+
+PORTUGUÊS
+Introdução:
+Esta atualização corrige um problema com a criação de iframes do Vimeo.
+A atualização apenas adiciona novas linhas de código. Não foi alterada nenhuma linha de código anterior
+As adições estão entre as linhas 168 e 175.
+Foi adicionado suporte para links do Vimeo cujo comprimento é igual a 27.
+
+ENGLISH
+
+Introduction:
+This update fixes an issue with the creation of Vimeo's iframes.
+The update only adds new lines of code. Was not changed any previous line of code
+The additions are between lines 168 and 175.
+Was added support for Vimeo links whose lengths are equal to 27.
