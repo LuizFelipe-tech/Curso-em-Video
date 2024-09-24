@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+#nome{
+    font-family: Exo, Arial, Helvetica, sans-serif;
+}
+#foto{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.socialmedia{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+}
+#linkedin{
+    right: 10px;
+}
+nav{
+    background: lightblue;
+    padding: 5px;
+}
+body{
+    margin: 0px;
+}
