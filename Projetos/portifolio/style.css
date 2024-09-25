@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 #profilep{
     width: 50px;
@@ -8,7 +9,7 @@
     top: 15px;
 }
 nav{
-    background-color: #386dbd;
+    background-color: #2811f1;
     padding: 10px;
     margin: 10px;
     margin-bottom: 0px;
@@ -23,8 +24,12 @@ nav>p{
     font-weight: bold;
 }
 body{
-    margin: 0px;
-    background-image: url('background.avif');
+    height: 100vh;
+    background-image: url('image/cosmic-environment-with-colorful-neon-laser-lights-perfect-digital-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-position: fixed;
 }
 .socialmedias{
     width: 30px;
@@ -32,30 +37,48 @@ body{
     border-radius: 5px;
     position: absolute;
 }
+h1{
+    position: absolute;
+}
 body>h1{
-    text-decoration: underline;
     margin-left: 10px;
     margin-bottom: 0px;
     margin-top: 0px;
-    color: #009ddd;
+    color: #bf81ff;
     font-size: 50px;
-    font-family: exo, Arial, Helvetica, sans-serif;
-    position: relative;
+    top: 50%;
     left: 50%;
-    transform: translate(-25%, -25%);
+    transform: translate(-50%, -50%);
+    font-family: Exo, Arial, Helvetica, sans-serif;
 }
 body>p{
-    margin-top: 10px;
-    color: #009ddd;
+    position: absolute;
+    top: 35%;
+    left: 31%;
+    color: #bf81ff;
     text-align: center;
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Karla, Arial, Helvetica, sans-serif;
 }
 #linkedin{
-    right: 20px;
+    right: 30px;
     top: 25px
 }
 #download{
-    right: 60px;
-    top: 30px;
+    right: 70px;
+    top: 25px;
+}
+#html{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 55vh;
+    margin-left: 10%;
+    display: inline-block;
+}
+.skillimg{
+    width: 100px;
+    height: 100px;
 }
