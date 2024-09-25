@@ -1,26 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
-
-#nome{
-    font-family: Exo, Arial, Helvetica, sans-serif;
-}
-#foto{
+#profilep{
     width: 50px;
     height: 50px;
-    border-radius: 5px;
+    display: inline-block;
+    border-radius: 10px;
+    position: absolute;
+    top: 15px;
 }
-.socialmedia{
+nav{
+    background-color: #386dbd;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    height: 80px;
+}
+nav>p{
+    display: inline-block;
+    position: absolute;
+    font-family: Exo, Arial, Helvetica, sans-serif;
+    left: 65px;
+    font-weight: bold;
+}
+body{
+    margin: 0px;
+    background-image: url('background.avif');
+}
+.socialmedias{
     width: 30px;
     height: 30px;
     border-radius: 5px;
     position: absolute;
 }
+h1{
+    position: absolute;
+}
+body>h1{
+    text-decoration: underline;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #009ddd;
+    font-size: 50px;
+    left: 50%;
+    transform: translate(50px 30px);
+}
+body>p{
+    margin-top: 10px;
+    color: #009ddd;
+    text-align: center;
+    font-size: 25px;
+}
 #linkedin{
-    right: 10px;
+    right: 20px;
+    top: 25px
 }
-nav{
-    background: lightblue;
-    padding: 5px;
-}
-body{
-    margin: 0px;
+#download{
+    right: 60px;
+    top: 30px;
 }
