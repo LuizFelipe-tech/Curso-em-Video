@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 #profilep{
-    width: 50px;
-    height: 50px;
+    max-width: 10vh;
+    max-height: 10vh;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 1vh;
     position: absolute;
-    top: 15px;
+    top: 2vh;
 }
 nav{
     background-color: #2811f1;
-    padding: 10px;
-    margin: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    height: 80px;
+    padding: 1vh;
+    margin: 1vh;
+    margin-bottom: 0vh;
+    border-radius: 1vh;
+    height: 14vh;
 }
 nav>p{
     display: inline-block;
     position: absolute;
     font-family: Exo, Arial, Helvetica, sans-serif;
-    left: 65px;
+    left: 6.5vh;
     font-weight: bold;
 }
 body{
@@ -32,20 +32,20 @@ body{
     background-position: fixed;
 }
 .socialmedias{
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 0.5vh;
     position: absolute;
 }
 h1{
     position: absolute;
 }
 body>h1{
-    margin-left: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-left: 1vh;
+    margin-bottom: 0vh;
+    margin-top: 0vh;
     color: #bf81ff;
-    font-size: 50px;
+    font-size: 7vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -53,8 +53,8 @@ body>h1{
 }
 body>p{
     position: absolute;
-    top: 35%;
-    left: 31%;
+    top: 33vh;
+    left: 55vh;
     color: #bf81ff;
     text-align: center;
     font-size: 25px;
@@ -70,15 +70,16 @@ body>p{
 }
 #html{
     background-color: white;
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 55vh;
+    margin-top: 25%;
     margin-left: 10%;
     display: inline-block;
+    box-shadow: 5px 5px 5px black;
 }
 .skillimg{
-    width: 100px;
-    height: 100px;
+    max-height: 100px;
+    max-width: 100px;
 }
