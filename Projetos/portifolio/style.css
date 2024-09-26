@@ -14,7 +14,7 @@ nav{
     margin: 1vh;
     margin-bottom: 0vh;
     border-radius: 1vh;
-    height: 14vh;
+    height: 12vh;
 }
 nav>p{
     display: inline-block;
@@ -26,7 +26,7 @@ nav>p{
 body{
     height: 100vh;
     background-image: url('image/cosmic-environment-with-colorful-neon-laser-lights-perfect-digital-wallpaper.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center center;
     background-size: cover;
     background-position: fixed;
@@ -37,28 +37,22 @@ body{
     border-radius: 0.5vh;
     position: absolute;
 }
-h1{
-    position: absolute;
-}
-body>h1{
-    margin-left: 1vh;
-    margin-bottom: 0vh;
-    margin-top: 0vh;
+#secao1>h1{
     color: #bf81ff;
-    font-size: 7vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 5em;
     font-family: Exo, Arial, Helvetica, sans-serif;
-}
-body>p{
-    position: absolute;
-    top: 33vh;
-    left: 55vh;
-    color: #bf81ff;
+    position: relative;
     text-align: center;
-    font-size: 25px;
+    margin: 0;
+    top: 10vh;
+}
+#secao1>p{
+    position: relative;
+    color: #bf81ff;
+    font-size: 2em;
     font-family: Karla, Arial, Helvetica, sans-serif;
+    text-align: center;
+    top: 10vh;
 }
 #linkedin{
     right: 30px;
@@ -68,18 +62,26 @@ body>p{
     right: 70px;
     top: 25px;
 }
+.skillimg{
+    position: relative;
+    max-height: 100px;
+    max-width: 100px;
+}
+#skills{
+    position: relative;
+    color: #bf81ff;
+    font-family: Exo, Arial, Helvetica, sans-serif;
+    top: 15vh;
+    font-size: 3em;
+    left: 10vh;
+}
 #html{
     background-color: white;
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 25%;
-    margin-left: 10%;
-    display: inline-block;
-    box-shadow: 5px 5px 5px black;
-}
-.skillimg{
-    max-height: 100px;
-    max-width: 100px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+    margin-top: 25vh;
+    margin-left: 20vh;
 }
