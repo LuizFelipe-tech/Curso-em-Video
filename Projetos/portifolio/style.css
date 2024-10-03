@@ -26,9 +26,8 @@ nav>p{
 body{
     height: 100vh;
     background-image: url('image/cosmic-environment-with-colorful-neon-laser-lights-perfect-digital-wallpaper.jpg');
-    background-repeat: repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
     background-position: fixed;
 }
 .socialmedias{
@@ -76,12 +75,25 @@ body{
     left: 10vh;
 }
 #html{
+    position: absolute;
     background-color: white;
     width: 100px;
     height: 100px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
-    margin-top: 25vh;
-    margin-left: 20vh;
+    left: 10vh;
+    top: 77vh;
+}
+#css{
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+    left: 50%;
+    top: 77vh;
+    transform: translate(-50%, -50%);
 }
