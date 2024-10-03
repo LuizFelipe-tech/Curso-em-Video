@@ -62,7 +62,6 @@ body{
     top: 25px;
 }
 .skillimg{
-    position: relative;
     max-height: 100px;
     max-width: 100px;
 }
@@ -82,8 +81,8 @@ body{
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
-    left: 10vh;
-    top: 77vh;
+    left: 5%;
+    top: 80%;
 }
 #css{
     position: absolute;
@@ -94,6 +93,23 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     left: 50%;
-    top: 77vh;
-    transform: translate(-50%, -50%);
+    top: 80%;
+    transform: translateX(-50%);
+}
+#cssimg{
+    padding-left: 15px;
+}
+#javascript{
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+    left: 90%;
+    top: 80%;
+}
+#marker{
+    background-image: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff43");
 }
