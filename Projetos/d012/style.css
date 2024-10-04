@@ -40,3 +40,25 @@ body{
     padding-bottom: 2vh;
     padding-top: 2vh;
 }
+#secao4{
+    background-image: url('imagens/background002.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    height: 30%;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+#part5{
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 50%;
+    color: white;
+}
+#footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1em;
+}
