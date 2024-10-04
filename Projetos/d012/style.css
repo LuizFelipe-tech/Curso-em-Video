@@ -22,8 +22,21 @@
 body{
     margin: 0px;
 }
-#part1 > p{
+.cordel{
     font-family: sriracha, Arial, Helvetica, sans-serif;
     font-size: 8vh;
     margin-left: 5vh;
+}
+#part2{
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 50%;
+    color: white;
+}
+#secao2{
+    background-image: url('imagens/background001.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    height: 30%;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
 }
