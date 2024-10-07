@@ -5,7 +5,7 @@ var closeB = document.createElement('img');
 var p = document.createElement('p')
 closeB.setAttribute('src', 'image/fechar.png')
 html.addEventListener('click',() => clicarHTML(html, imghtml, p));
-function clicarHTML(x, y, z) {
+function clicarHTML(x, y) {
     if (control == 0) {
         x.style.transitionDuration = '2s';
         x.style.width = '500px';
@@ -16,7 +16,6 @@ function clicarHTML(x, y, z) {
         x.style.transform = 'translateX(-50%)';
         y.style.display = 'block';
         y.style.margin = 'auto';
-        control = 1;
         x.appendChild(closeB);
         closeB.style.width = '40px';
         closeB.style.width = '40px';
@@ -25,13 +24,19 @@ function clicarHTML(x, y, z) {
         closeB.style.bottom = '40%';
         closeB.addEventListener('click', fechar);
         control++
+        console.log(control)
+        function par(){
+            x.appendChild
+            p.style.position = 'relative'
+            p.style.top = '-20%'
+            p.innerHTML = 'Tenho amplo domínio de HTML, o que me permite criar e estruturar páginas web de maneira eficiente, organizando textos, imagens e outros elementos de mídia. Sou capaz de desenvolver layouts responsivos que se adaptam a diferentes dispositivos, criar formulários interativos para coleta de dados, otimizar o conteúdo para SEO com tags adequadas, e integrar o HTML com CSS e JavaScript para estilizar e adicionar funcionalidades dinâmicas às páginas. Isso me permite desenvolver sites funcionais, acessíveis e prontos para interações com os usuários.'
+        }
         switch(x){
             case html:
-                html.appendChild(p)
-                p.innerHTML = 'Tenho amplo domínio de HTML, o que me permite criar e estruturar páginas web de maneira eficiente, organizando textos, imagens e outros elementos de mídia. Sou capaz de desenvolver layouts responsivos que se adaptam a diferentes dispositivos, criar formulários interativos para coleta de dados, otimizar o conteúdo para SEO com tags adequadas, e integrar o HTML com CSS e JavaScript para estilizar e adicionar funcionalidades dinâmicas às páginas. Isso me permite desenvolver sites funcionais, acessíveis e prontos para interações com os usuários.'
+                setTimeout(par(), 3000)
+            }                
         }
     }
-}
 function fechar(){
     if(control > 0)
     html.style.width = '100px'
