@@ -84,7 +84,7 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     left: 10%;
-    top: 85%;
+    top: 95%;
 }
 #css{
     position: absolute;
@@ -95,7 +95,7 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     left: 45%;
-    top: 85%;
+    top: 95%;
     transform: translateX(-50%);
 }
 #cssimg{
@@ -110,7 +110,7 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     left: 85%;
-    top: 85%;
+    top: 95%;
 }
 #marker{
     background-image: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff00");

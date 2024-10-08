@@ -39,18 +39,11 @@ function clicarHTML(x, y) {
     }
 }
 function fechar(){
-    console.log('Inicio função fechar 1')
-    console.log(`Control: ${control}`)
-    console.log(`Control: ${control}`)
-    console.log('Inicio função fechar 2')
-    html.style.transitionDuration = '2s'
-        html.style.width = '100px'
-        html.style.height = '100px'
-        html.style.left = '5%'
-        html.style.top = '95%'
-        html.style.transform = ''
-        control--
-        html.removeChild(closeB)
-        html.removeChild(p)
-        console.log(`Fim função fechar ${control}`)
+    alert('Teste')
+    html.removeChild(p)
+    html.style.width = '100px'
+    html.style.height = '100px'
+    html.style.top = '95%'
+    html.style.left = '10%'
+    imghtml.style.display = ''
 }
