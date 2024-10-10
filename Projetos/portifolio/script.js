@@ -1,21 +1,18 @@
-var html = document.querySelector('#html');
-var imghtml = document.querySelector('#imghtml');
+var divHtml = document.querySelector('#html');
+var imgHtml = document.querySelector('#imghtml');
 var control = 1;
-var closeB = document.createElement('img');
-var p = document.createElement('p')
-closeB.setAttribute('src', 'image/fechar.png')
-console.log('Evento criado')
-html.addEventListener('click',() => clicarHTML(html, imghtml));
+var closeButton = document.createElement('img');
+var paragraph = document.createElement('p')
+closeButton.setAttribute('src', 'image/fechar.png')
+divHtml.addEventListener('click',() => clicarHTML(divHtml, imgHtml));
 function clicarHTML(x, y) {
-    console.log('inicio da função 1')
-    if (control == 1) {
-        console.log('Inicio da função 2')
+    if (control == true) {
         setTimeout(function() {
-            x.appendChild(p);
-            p.style.position = 'relative';
-            p.style.top = '-20%';
+            x.appendChild(paragraph);
+            paragraph.style.position = 'relative';
+            paragraph.style.top = '-20%';
             console.log('Inserção parágrafo')
-            p.innerHTML = 'Tenho amplo domínio de HTML, o que me permite criar e estruturar páginas web de maneira eficiente, organizando textos, imagens e outros elementos de mídia. Sou capaz de desenvolver layouts responsivos que se adaptam a diferentes dispositivos, criar formulários interativos para coleta de dados, otimizar o conteúdo para SEO com tags adequadas, e integrar o HTML com CSS e JavaScript para estilizar e adicionar funcionalidades dinâmicas às páginas. Isso me permite desenvolver sites funcionais, acessíveis e prontos para interações com os usuários.';
+            paragraph.innerHTML = 'Tenho amplo domínio de HTML, o que me permite criar e estruturar páginas web de maneira eficiente, organizando textos, imagens e outros elementos de mídia. Sou capaz de desenvolver layouts responsivos que se adaptam a diferentes dispositivos, criar formulários interativos para coleta de dados, otimizar o conteúdo para SEO com tags adequadas, e integrar o HTML com CSS e JavaScript para estilizar e adicionar funcionalidades dinâmicas às páginas. Isso me permite desenvolver sites funcionais, acessíveis e prontos para interações com os usuários.';
         }, 1500);
         x.style.transitionDuration = '2s';
         x.style.width = '500px';
@@ -26,24 +23,26 @@ function clicarHTML(x, y) {
         x.style.transform = 'translateX(-50%)';
         y.style.display = 'block';
         y.style.margin = 'auto';
-        x.appendChild(closeB);
-        closeB.style.width = '40px';
-        closeB.style.width = '40px';
-        closeB.style.position = 'relative';
-        closeB.style.left = '90%';
-        closeB.style.bottom = '40%';
-        closeB.addEventListener('click', fechar);
+        x.appendChild(closeButton);
+        closeButton.style.width = '40px';
+        closeButton.style.width = '40px';
+        closeButton.style.position = 'relative';
+        closeButton.style.left = '90%';
+        closeButton.style.bottom = '40%';
+        closeButton.addEventListener('click', fechar);
         console.log(control)
-        control++
+        control = false
         console.log(control)                      
     }
 }
-function fechar(){
-    alert('Teste')
-    html.removeChild(p)
-    html.style.width = '100px'
-    html.style.height = '100px'
-    html.style.top = '95%'
-    html.style.left = '10%'
-    imghtml.style.display = ''
+function fechar(click){
+    click.stopPropagation()
+    divHtml.removeChild(paragraph)
+    divHtml.style.width = '100px'
+    divHtml.style.height = '100px'
+    divHtml.style.top = '95%'
+    divHtml.style.left = '10%'
+    imgHtml.style.display = ''
+    divHtml.removeChild(closeButton)
+    control = true
 }
