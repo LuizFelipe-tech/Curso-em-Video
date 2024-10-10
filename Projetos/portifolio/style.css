@@ -26,7 +26,7 @@ nav>p{
 body{
     height: 100vh;
     background-image: url('image/background004.jpg');
-    background-color: black;
+    background-color: yellow;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -75,8 +75,35 @@ body{
     font-size: 3em;
     left: 10vh;
 }
-#html{
+.contractedHtml{
     position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+    left: 10%;
+    top: 95%;
+    cursor: pointer;
+}
+.expanded{
+    position: absolute;
+    transition-duration: 2s;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.452);
+    width: 600px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+}
+.expandedToContractedHtml{
+    position: absolute;
+    transition-duration: 2s;
     background-color: white;
     width: 100px;
     height: 100px;
@@ -114,4 +141,43 @@ body{
 }
 #marker{
     background-image: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff00");
+}
+.imgExpandedToContracted{
+    display: block;
+    margin: auto;
+}
+.imgHtmlExpanded{
+    display: block;
+    margin: auto;
+}
+.imgHtmlContracted{
+    transition-duration: 2s;
+    display: block;
+    margin: 0;
+}
+.HiddenCloseButton{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 90%;
+    bottom: 40%;
+    display: none;
+}
+.ShowedCloseButton{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 90%;
+    bottom: 40%;
+    display: inline-block;
+}
+.hiddenParagraph{
+    position: relative;
+    top: -20%;
+    display: none;
+}
+.showParagraph{
+    position: relative;
+    top: 20%;
+    display: inline;
 }
