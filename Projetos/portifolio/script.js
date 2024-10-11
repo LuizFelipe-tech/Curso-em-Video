@@ -2,23 +2,31 @@
 var divHtml = document.querySelector('#html');
 var imgHtml = document.querySelector('#imghtml');
 var paragraphHtml = document.querySelector('#paragraphHtml')
+var closeButtonHtml = document.querySelector('#closeButtonHtml');
 var divCss = document.querySelector('#css')
 var imgCss = document.querySelector('cssimg')
 var paragraphCss = document.querySelector('#paragraphCss')
-var closeButton = document.querySelector('#closeButton');
+var closeButtonCss = document.querySelector('#closeButtonCss')
 var isElementContracted = true;
 var isWhichElement = undefined
 
 divHtml.classList.add('contractedHtml')
 imgHtml.classList.add('imgContracted')
-closeButton.classList.add('HiddenCloseButton')
+closeButtonHtml.classList.add('HiddenCloseButton')
 paragraphHtml.classList.add('hiddenParagraph')
 divCss.classList.add('contractedCss')
+paragraphCss.classList.add('hiddenParagraph')
+closeButtonCss.classList.add('HiddenCloseButton')
 
-divHtml.addEventListener('click',() => clickHappened(divHtml, imgHtml, paragraphHtml));
-divCss.addEventListener('click', ()=> clickHappened(divCss, imgCss, paragraphCss))
+while(isWhichElement){
+    if(isWhichElement == undefined){
+        divHtml.addEventListener('click',() => clickHappened(divHtml, closeButtonHtml, paragraphHtml));
+        divCss.addEventListener('click', ()=> clickHappened(divCss, closeButtonCss, paragraphCss))
+    }
+}
 
-function clickHappened(element, imgElement, paragraphElement) {
+function clickHappened(element, closeButton, paragraphElement) {
+    isElementContracted = false   
     elementClicked()
     function elementClicked(){
         switch (element){
@@ -52,17 +60,9 @@ function clickHappened(element, imgElement, paragraphElement) {
             closeButton.classList.remove('HiddenCloseButton')
             closeButton.classList.add('ShowedCloseButton')
             closeButton.addEventListener('click', fechar)
-            switch(isWhichElement){
-                case 'Html':
-                    paragraphElement.innerHTML = 'Tenho amplo domínio de HTML e sou capaz de estruturar páginas web de forma semântica e organizada, seguindo os padrões recomendados pela W3C. Possuo experiência na criação de documentos bem estruturados, com foco em acessibilidade e usabilidade. Dominei o uso de tags HTML5, especialmente aquelas relacionadas a mídia, formulários e elementos interativos, o que me permite desenvolver aplicações web modernas. Minha habilidade em combinar HTML com CSS e JavaScript me ajuda a criar interfaces eficazes e funcionais, sempre garantindo a melhor experiência para o usuário final.';
-                    break
-                case 'Css':
-                    paragraphElement.innerHTML = 'Tenho amplo domínio de CSS, com habilidades avançadas em estilização e layout de páginas web. Sou capaz de criar designs responsivos e dinâmicos, aplicando boas práticas de organização e manutenção de código, além de integrar eficientemente CSS com HTML e JavaScript. Minha experiência inclui o uso de técnicas modernas, como Flexbox e Grid, para desenvolver interfaces intuitivas e atraentes, sempre com foco em garantir uma boa experiência para o usuário. Também tenho conhecimento em personalização de estilos com variáveis e animações CSS, o que me permite adaptar facilmente a diferentes demandas de projetos web.'
-            }
         }, 1500);
 
         element.classList.remove(`contracted${isWhichElement}`)
-        element.classList.add('expanded')
-        isElementContracted = false                      
+        element.classList.add('expanded')                   
     }
 }

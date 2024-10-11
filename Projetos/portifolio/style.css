@@ -68,6 +68,7 @@ body{
     max-width: 100px;
     display: block;
     margin: auto;
+    margin-bottom: 0;
 }
 #skills{
     position: relative;
@@ -75,13 +76,13 @@ body{
     font-family: Exo, Arial, Helvetica, sans-serif;
     top: 15vh;
     font-size: 3em;
-    left: 10vh;
+    left: 15vh;
 }
 .contractedHtml{
     position: absolute;
     background-color: white;
-    width: 10vh;
-    height: 10vh;
+    width: 15vh;
+    height: 15vh;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
@@ -96,19 +97,20 @@ body{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.452);
     width: 60vh;
-    height: 27vh;
+    height: 40vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px;
+    padding: 1.5vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .expandedToContractedHtml{
     position: absolute;
     transition-duration: 2s;
     background-color: white;
-    width: 10vh;
-    height: 10vh;
+    width: 15vh;
+    height: 15vh;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
@@ -119,8 +121,8 @@ body{
     position: absolute;
     transition-duration: 2s;
     background-color: white;
-    width: 100px;
-    height: 100px;
+    width: 15vh;
+    height: 15vh;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
@@ -130,19 +132,20 @@ body{
 .contractedCss{
     position: absolute;
     background-color: white;
-    width: 10vh;
-    height: 10vh;
+    width: 15vh;
+    height: 15vh;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     left: 45%;
     top: 95%;
+    cursor: pointer;
 }
 #javascript{
     position: absolute;
     background-color: white;
-    width: 10vh;
-    height: 10vh;
+    width: 13vh;
+    height: 13vh;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
@@ -170,9 +173,11 @@ body{
     cursor: pointer;
 }
 .hiddenParagraph{
-    top: -20%;
     display: none;
 }
 .showParagraph{
     display: inline;
+}
+.markers{
+    background-color: yellow;
 }
