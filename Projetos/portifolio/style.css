@@ -27,10 +27,12 @@ body{
     height: 100vh;
     background-image: url('image/background004.jpg');
     background-color: yellow;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center center;
     background-size: cover;
     background-position: fixed;
+    margin: 0;
+    padding: 0;
 }
 .socialmedias{
     width: 3vh;
@@ -137,8 +139,21 @@ body{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     left: 45%;
     top: 95%;
+    cursor: pointer;
 }
-#javascript{
+.expandedToContractedJavascript{
+    position: absolute;
+    transition-duration: 2s;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+    left: 85%;
+    top: 95%;
+}
+.contractedJavascript{
     position: absolute;
     background-color: white;
     width: 10vh;
@@ -148,6 +163,7 @@ body{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     left: 85%;
     top: 95%;
+    cursor: pointer;
 }
 #marker{
     background-image: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff00");
@@ -175,4 +191,15 @@ body{
 }
 .showParagraph{
     display: inline;
+}
+.greyBackgroundOff{
+    display: none;
+}
+.greyBackgroundOn{
+    position: absolute;
+    opacity: 0.8;
+    width: 200vh;
+    height: 110vh;
+    margin: 0;
+    display: block;
 }
