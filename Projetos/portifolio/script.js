@@ -18,13 +18,15 @@ var isElementContracted = true;
 var isWhichElement = undefined
 
 divHtml.classList.add('contractedHtml')
-imgHtml.classList.add('imgContracted')
-closeButtonHtml.classList.add('HiddenCloseButton')
-closeButtonCss.classList.add('HiddenCloseButton')
-paragraphHtml.classList.add('hiddenParagraph')
 divCss.classList.add('contractedCss')
 divJavascript.classList.add('contractedJavascript')
+closeButtonHtml.classList.add('HiddenCloseButton')
+closeButtonCss.classList.add('HiddenCloseButton')
 closeButtonJavascript.classList.add('HiddenCloseButton')
+paragraphHtml.classList.add('hiddenParagraph')
+paragraphCss.classList.add('hiddenParagraph')
+paragraphJavascript.classList.add('hiddenParagraph')
+imgHtml.classList.add('imgContracted')
 greyBackground.classList.add('greyBackgroundOff')
 
     
@@ -33,17 +35,16 @@ divCss.addEventListener('click', ()=> clickHappened(divCss, closeButtonCss, para
 divJavascript.addEventListener('click', ()=> clickHappened(divJavascript, closeButtonJavascript, paragraphJavascript))
 
 function clickHappened(element, closeButton, paragraphElement) {
-console.log(isWhichElement == undefined, !isElementContracted == true)
-if(!isWhichElement == undefined || !isElementContracted == true) return 
-console.log('Executado')
+console.log(isWhichElement)
+if(!isWhichElement == undefined || !isElementContracted == true) return;
     elementClicked()
     function elementClicked(){
         switch (element){
             case divHtml: 
-                isWhichElement = 'Html'
+                isWhichElement = ['Html', element]
                 break
             case divCss:
-                isWhichElement = 'Css'
+                isWhichElement = ['Css', element]
         }
     }
     function fechar(click){
@@ -51,10 +52,13 @@ console.log('Executado')
         closeButton.classList.remove('ShowedCloseButton')
         closeButton.classList.add('HiddenCloseButton')
         element.classList.remove('expanded')
-        element.classList.add(`expandedToContracted${isWhichElement}`)
+        element.classList.add(`expandedToContracted${isWhichElement[0]}`)
+        if(!isWhichElement[1] == element) return;
         setTimeout(function(){
-            element.classList.remove(`expandedToContracted${isWhichElement}`)
-            element.classList.add(`contracted${isWhichElement}`)
+            if(!isWhichElement[1] == element) return;
+            console.log(isWhichElement[0])
+            element.classList.remove(`expandedToContracted${isWhichElement[0]}`)
+            element.classList.add(`contracted${isWhichElement[0]}`)
         }, 2001)
         paragraphElement.classList.remove('showParagraph')
         paragraphElement.classList.add('hiddenParagraph')
@@ -74,7 +78,7 @@ console.log('Executado')
         }, 1500);
         greyBackground.classList.remove('greyBackgroundOff')
         greyBackground.classList.add('greyBackgroundOn')
-        element.classList.remove(`contracted${isWhichElement}`)
+        element.classList.remove(`contracted${isWhichElement[0]}`)
         element.classList.add('expanded')
         isElementContracted = false                      
     }
