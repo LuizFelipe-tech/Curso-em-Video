@@ -50,8 +50,8 @@ table {
     height: 8vh;
     display: inline-block;
     border-radius: 1vh;
-    position: absolute;
-    top: 2vh;
+    position: relative;
+    top: 1vh;
 }
 nav{
     background-color: #2811f1;
@@ -102,11 +102,11 @@ body{
 }
 #linkedin{
     right: 30px;
-    top: 25px
+    top: 3vh
 }
 #download{
     right: 70px;
-    top: 25px;
+    top: 3vh;
 }
 .skillimg{
     max-height: 100px;
@@ -195,6 +195,18 @@ body{
     left: 85%;
     top: 95%;
     cursor: pointer;
+}
+.expandedToContractedCss{
+    position: absolute;
+    transition-duration: 2s;
+    background-color: white;
+    width: 10vh;
+    height: 10vh;
+    padding: 10vh;
+    border-radius: 10vh;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+    left: 85%;
+    top: 95%;
 }
 #marker{
     background-image: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff00");
