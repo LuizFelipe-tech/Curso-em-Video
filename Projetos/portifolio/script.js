@@ -9,7 +9,6 @@ var paragraphCss = document.querySelector('#paragraphCss')
 var closeButtonCss = document.querySelector('#closeButtonCss')
 
 var divJavascript = document.querySelector('#javascript')
-var imgJavascript = document.querySelector('#javascriptimg')
 var paragraphJavascript = document.querySelector('#paragraphJavascript')
 var closeButtonJavascript = document.querySelector('#closeButtonJavascript')
 
@@ -19,23 +18,24 @@ var isWhichElement = undefined
 
 divHtml.classList.add('contractedHtml')
 imgHtml.classList.add('imgContracted')
+paragraphHtml.classList.add('hiddenParagraph')
 closeButtonHtml.classList.add('HiddenCloseButton')
 closeButtonCss.classList.add('HiddenCloseButton')
-paragraphHtml.classList.add('hiddenParagraph')
 divCss.classList.add('contractedCss')
+paragraphCss.classList.add('hiddenParagraph')
 divJavascript.classList.add('contractedJavascript')
 closeButtonJavascript.classList.add('HiddenCloseButton')
+paragraphJavascript.classList.add('hiddenParagraph')
 greyBackground.classList.add('greyBackgroundOff')
 
-    
 divHtml.addEventListener('click',() => clickHappened(divHtml, closeButtonHtml, paragraphHtml));
 divCss.addEventListener('click', ()=> clickHappened(divCss, closeButtonCss, paragraphCss))
 divJavascript.addEventListener('click', ()=> clickHappened(divJavascript, closeButtonJavascript, paragraphJavascript))
 
 function clickHappened(element, closeButton, paragraphElement) {
-console.log(isWhichElement == undefined, !isElementContracted == true)
-if(!isWhichElement == undefined || !isElementContracted == true) return 
-console.log('Executado')
+    
+if(!isWhichElement == undefined || !isElementContracted == true) return
+alert('Executado')
     elementClicked()
     function elementClicked(){
         switch (element){
@@ -60,6 +60,7 @@ console.log('Executado')
         paragraphElement.classList.add('hiddenParagraph')
         greyBackground.classList.remove('greyBackgroundOn')
         greyBackground.classList.add('greyBackgroundOff')
+        alert('Executado true')
         isElementContracted = true
     }
 
@@ -76,6 +77,7 @@ console.log('Executado')
         greyBackground.classList.add('greyBackgroundOn')
         element.classList.remove(`contracted${isWhichElement}`)
         element.classList.add('expanded')
+        alert('Executado false')
         isElementContracted = false                      
     }
 }
