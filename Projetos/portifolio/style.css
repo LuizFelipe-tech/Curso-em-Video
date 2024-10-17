@@ -185,13 +185,25 @@ body{
     top: 95%;
     cursor: pointer;
 }
-#javascript{
+.contractedJavascript{
     position: absolute;
     background-color: white;
     width: 10vh;
     height: 10vh;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+    left: 85%;
+    top: 95%;
+}
+.expandedToContractedCss{
+    position: absolute;
+    transition-duration: 2s;
+    background-color: white;
+    width: 10vh;
+    height: 10vh;
+    padding: 10vh;
+    border-radius: 10vh;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     left: 85%;
     top: 95%;
