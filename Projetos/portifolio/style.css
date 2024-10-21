@@ -275,6 +275,10 @@ body{
         max-width: 2.5vh;
         max-height: 2.5vh;
     }
+    .expanded{
+        width: 15vh;
+        height: 9.2vh;
+    }
 }
 @media (max-width: 7in) and (min-width: 4.01in){
     #maintitle{
@@ -290,21 +294,25 @@ body{
     .contractedHtml{
         width: 6.25vh;
         height: 6.25vh;
-        top: 50%;
+        top: 60%;
     }
     .contractedCss{
         width: 6.25vh;
         height: 6.25vh;
-        top: 50%;
+        top: 60%;
     }
     .contractedJavascript{
         width: 6.25vh;
         height: 6.25vh;
-        top: 50%;
+        top: 60%;
     }
     .skillimg{
         max-width: 4.1vh;
         max-height: 4.1vh;
+    }
+    .expanded{
+        width: 25vh;
+        height: 15.4vh;
     }
 }
 @media (max-width: 10in) and (min-width: 7.01in){
@@ -321,21 +329,25 @@ body{
     .contractedHtml{
         width: 9.2vh;
         height: 9.2vh;
-        top: 60%;
+        top: 70%;
     }
     .contractedCss{
         width: 9.2vh;
         height: 9.2vh;
-        top: 60%;
+        top: 70%;
     }
     .contractedJavascript{
         width: 9.2vh;
         height: 9.2vh;
-        top: 60%;
+        top: 70%;
     }
     .skillimg{
         max-width: 6.1vh;
         max-height: 6.1vh;
+    }
+    .expanded{
+        width: 37vh;
+        height: 22.8vh;
     }
 }
 @media (max-width: 13in) and (min-width: 10.01in){
@@ -352,21 +364,25 @@ body{
     .contractedHtml{
         width: 12vh;
         height: 12vh;
-        top: 64%;
+        top: 75%;
     }
     .contractedCss{
         width: 12vh;
         height: 12vh;
-        top: 64%;
+        top: 75%;
     }
     .contractedJavascript{
         width: 12vh;
         height: 12vh;
-        top: 64%;
+        top: 75%;
     }
     .skillimg{
         max-width: 8vh;
         max-height: 8vh;
+    }
+    .expanded{
+        width: 48vh;
+        height: 29.5vh;
     }
 }
 @media (max-width: 16in) and (min-width: 13.01in){
@@ -383,20 +399,24 @@ body{
     .contractedHtml{
         width: 15vh;
         height: 15vh;
-        top: 80%;
+        top: 90%;
     }
     .contractedCss{
         width: 15vh;
         height: 15vh;
-        top: 80%;
+        top: 90%;
     }
     .contractedJavascript{
         width: 15vh;
         height: 15vh;
-        top: 80%;
+        top: 90%;
     }
     .skillimg{
         max-width: 10vh;
         max-height: 10vh;
+    }
+    .expanded{
+        width: 60vh;
+        height: 37vh;
     }
 }
