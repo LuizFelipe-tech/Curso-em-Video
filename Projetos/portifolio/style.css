@@ -3,10 +3,6 @@
 :root{
     --skillsize: 15vh;
 }
-/* http://meyerweb.com/eric/tools/css/reset/
-v2.0 | 20110126
-License: none (public domain)
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -33,6 +29,14 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-position: fixed;
+    overflow-x: hidden;
+    text-align: left;
 }
 ol, ul {
     list-style: none;
@@ -60,10 +64,7 @@ table {
 nav{
     background-color: #2811f1;
     padding: 1vh;
-    margin: 0.5vh;
-    margin-bottom: 0vh;
     border-radius: 1vh;
-    height: 12vh;
 }
 nav>p{
     display: inline-block;
@@ -72,16 +73,12 @@ nav>p{
     left: 6.5vh;
     font-weight: bold;
 }
-body{
-    height: 100vh;
+main{
     background-image: url('image/background004.jpg');
-    background-color: black;
-    background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    background-position: fixed;
-    overflow-x: hidden;
-    text-align: left;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
 }
 .socialmedias{
     width: 3vh;
@@ -97,17 +94,20 @@ body{
     right: 7vh;
     top: 3vh;
 }
+.secao2{
+    font-family: Exo, Arial, Helvetica, sans-serif;
+}
 .skillimg{
     position: relative;
     max-height: 10vh;
     max-width: 10vh;
-    top: 20%;
+    top: 10%;
     display: block;
     margin: auto;
 }
 .expanded{
     position: absolute;
-    transition-duration: 2s;
+    transition-duration: 1.5s;
     background-color: white;
     border-radius: 1vh;
     box-shadow: rgba(0, 0, 0, 0.452);
@@ -127,7 +127,7 @@ body{
     height: 5vh;
     position: relative;
     left: 90%;
-    bottom: 35%;
+    bottom: 30%;
     display: none;
 }
 .ShowedCloseButton{
@@ -145,6 +145,7 @@ body{
 }
 .showParagraph{
     display: inline;
+    padding: 10%;
 }
 .contractedHtml{
     position: absolute;
@@ -160,7 +161,7 @@ body{
 }
 .expandedToContractedHtml{
     position: absolute;
-    transition-duration: 2s;
+    transition-duration: 1.5s;
     background-color: white;
     width: var(--skillsize);
     height: var(--skillsize);
@@ -172,7 +173,7 @@ body{
 }
 .expandedToContractedCss{
     position: absolute;
-    transition-duration: 2s;
+    transition-duration: 1.5s;
     background-color: white;
     width: var(--skillsize);
     height: var(--skillsize);
@@ -208,7 +209,7 @@ body{
 }
 .expandedToContractedJavascript{
     position: absolute;
-    transition-duration: 2s;
+    transition-duration: 1.5s;
     background-color: white;
     width: var(--skillsize);
     height: var(--skillsize);
@@ -256,17 +257,7 @@ body{
         font-size: 0.75vh;
         left: 2.5vh;
     }
-    .contractedHtml{
-        width: 1.5vh;
-        height: 1.5vh;
-        top: 20%;
-    }
-    .contractedCss{
-        width: 1.5vh;
-        height: 1.5vh;
-        top: 20%;
-    }
-    .contractedJavascript{
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
         width: 1.5vh;
         height: 1.5vh;
         top: 20%;
@@ -291,17 +282,7 @@ body{
         font-size: 1.25em;
         left: 4vh;
     }
-    .contractedHtml{
-        width: 6.25vh;
-        height: 6.25vh;
-        top: 60%;
-    }
-    .contractedCss{
-        width: 6.25vh;
-        height: 6.25vh;
-        top: 60%;
-    }
-    .contractedJavascript{
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
         width: 6.25vh;
         height: 6.25vh;
         top: 60%;
@@ -326,17 +307,7 @@ body{
         font-size: 1.8em;
         left: 6vh;
     }
-    .contractedHtml{
-        width: 9.2vh;
-        height: 9.2vh;
-        top: 70%;
-    }
-    .contractedCss{
-        width: 9.2vh;
-        height: 9.2vh;
-        top: 70%;
-    }
-    .contractedJavascript{
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
         width: 9.2vh;
         height: 9.2vh;
         top: 70%;
@@ -361,17 +332,7 @@ body{
         font-size: 2.4em;
         left: 8vh;
     }
-    .contractedHtml{
-        width: 12vh;
-        height: 12vh;
-        top: 75%;
-    }
-    .contractedCss{
-        width: 12vh;
-        height: 12vh;
-        top: 75%;
-    }
-    .contractedJavascript{
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
         width: 12vh;
         height: 12vh;
         top: 75%;
@@ -396,17 +357,7 @@ body{
         font-size: 3em;
         left: 10vh;
     }
-    .contractedHtml{
-        width: 15vh;
-        height: 15vh;
-        top: 90%;
-    }
-    .contractedCss{
-        width: 15vh;
-        height: 15vh;
-        top: 90%;
-    }
-    .contractedJavascript{
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
         width: 15vh;
         height: 15vh;
         top: 90%;
@@ -418,5 +369,180 @@ body{
     .expanded{
         width: 60vh;
         height: 37vh;
+    }
+}
+@media (max-width: 19in) and (min-width: 16.01in){
+    #maintitle{
+        font-size: 7.1em;
+    }
+    #introduction{
+        font-size: 2.9em;
+    }
+    #skills{
+        font-size: 3.5em;
+        left: 11.8vh;
+    }
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
+        width: 17.7vh;
+        height: 17.7vh;
+        top: 106.5%;
+    }
+    .skillimg{
+        max-width: 11.8vh;
+        max-height: 11.8vh;
+    }
+    .expanded{
+        width: 71vh;
+        height: 43.7vh;
+    }
+}
+@media (max-width: 21in) and (min-width: 19.01in){
+    #maintitle{
+        font-size: 8.4em;
+    }
+    #introduction{
+        font-size: 3.5em;
+    }
+    #skills{
+        font-size: 4.2em;
+        left: 14vh;
+    }
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
+        width: 21vh;
+        height: 21vh;
+        top: 126%;
+    }
+    .skillimg{
+        max-width: 14h;
+        max-height: 14vh;
+    }
+    .expanded{
+        width: 84vh;
+        height: 51.7.7vh;
+    }
+}
+@media (max-width: 24in) and (min-width: 22.01in) {
+    #maintitle {
+        font-size: 9.6em;
+    }
+    #introduction {
+        font-size: 4em;
+    }
+    #skills {
+        font-size: 4.8em;
+        left: 15.4vh;
+    }
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
+        width: 23.1vh;
+        height: 23.1vh;
+        top: 141.125%;
+    }
+    .skillimg {
+        max-width: 15.4vh;
+        max-height: 15.4vh;
+    }
+    .expanded {
+        width: 93.6vh;
+        height: 57.3333vh;
+    }
+}
+@media (max-width: 27in) and (min-width: 25.01in) {
+    #maintitle {
+        font-size: 10.8em;
+    }
+    #introduction {
+        font-size: 4.5em;
+    }
+    #skills {
+        font-size: 5.4em;
+        left: 16.6vh;
+    }
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
+        width: 25.3vh;
+        height: 25.3vh;
+        top: 156.25%;
+    }
+    .skillimg {
+        max-width: 16.6vh;
+        max-height: 16.6vh;
+    }
+    .expanded {
+        width: 102.9vh;
+        height: 62.2222vh;
+    }
+}
+@media (max-width: 30in) and (min-width: 28.01in) {
+    #maintitle {
+        font-size: 12em;
+    }
+    #introduction {
+        font-size: 5em;
+    }
+    #skills {
+        font-size: 6em;
+        left: 18vh;
+    }
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
+        width: 27.4vh;
+        height: 27.4vh;
+        top: 171.375%;
+    }
+    .skillimg {
+        max-width: 18vh;
+        max-height: 18vh;
+    }
+    .expanded {
+        width: 112.2vh;
+        height: 67.1111vh;
+    }
+}
+@media (max-width: 40in) and (min-width: 30.01in) {
+    #maintitle {
+        font-size: 16em;
+    }
+    #introduction {
+        font-size: 6.67em;
+    }
+    #skills {
+        font-size: 8em;
+        left: 22vh;
+    }
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
+        width: 36.4vh;
+        height: 36.4vh;
+        top: 212.5%;
+    }
+    .skillimg {
+        max-width: 22vh;
+        max-height: 22vh;
+    }
+    .expanded {
+        width: 132vh;
+        height: 83.3333vh;
+    }
+}
+@media (max-width: 50in) and (min-width: 40.01in) {
+    #maintitle {
+        font-size: 20em;
+    }
+    #introduction {
+        font-size: 8.33em;
+    }
+    #skills {
+        font-size: 10em;
+        left: 25vh;
+    }
+    .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
+        width: 45.5vh;
+        height: 45.5vh;
+        top: 253.125%;
+    }
+    .skillimg {
+        max-width: 25vh;
+        max-height: 25vh;
+    }
+    .expanded {
+        width: 150vh;
+        height: 100vh;
     }
 }
