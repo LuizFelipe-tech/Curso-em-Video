@@ -62,9 +62,10 @@ table {
     top: 1vh;
 }
 nav{
+    display: block;
     background-color: #2811f1;
     padding: 1vh;
-    border-radius: 1vh;
+    /*border-radius: 1vh;*/
 }
 nav>p{
     display: inline-block;
@@ -79,6 +80,7 @@ main{
     background-attachment: fixed;
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 .socialmedias{
     width: 3vh;
@@ -121,6 +123,12 @@ main{
 }
 #marker{
     background-image: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff00");
+}
+.hiddenGreyBackground{
+    display: none;
+}
+.showGreyBackground{
+    display: block;
 }
 .hiddenCloseButton{
     width: 5vh;
@@ -267,9 +275,13 @@ main{
         max-height: 2.5vh;
     }
     .expanded{
-        width: 15vh;
-        height: 9.2vh;
+        width: 45vh;
+        height: 17vh;
     }
+    .showParagraph{
+        font-size: 0.5em;
+        color: black
+}
 }
 @media (max-width: 7in) and (min-width: 4.01in){
     #maintitle{
@@ -292,8 +304,12 @@ main{
         max-height: 4.1vh;
     }
     .expanded{
-        width: 25vh;
-        height: 15.4vh;
+        width: 50vh;
+        height: 17vh;
+    }
+    .showParagraph{
+        font-size: 0.6em;
+        color: black;
     }
 }
 @media (max-width: 10in) and (min-width: 7.01in){
@@ -317,8 +333,8 @@ main{
         max-height: 6.1vh;
     }
     .expanded{
-        width: 37vh;
-        height: 22.8vh;
+        width: 50vh;
+        height: 27vh;
     }
 }
 @media (max-width: 13in) and (min-width: 10.01in){
@@ -370,179 +386,219 @@ main{
         width: 60vh;
         height: 37vh;
     }
+    .showParagraph{
+        position: relative;
+        top: 10%;
+        font-size: 1.1em;
+    }
 }
 @media (max-width: 19in) and (min-width: 16.01in){
     #maintitle{
-        font-size: 7.1em;
+        font-size: 6em;
     }
     #introduction{
-        font-size: 2.9em;
+        font-size: 2.5em;
     }
     #skills{
-        font-size: 3.5em;
-        left: 11.8vh;
+        font-size: 3em;
+        left: 10vh;
     }
     .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
-        width: 17.7vh;
-        height: 17.7vh;
-        top: 106.5%;
+        width: 15vh;
+        height: 15vh;
+        top: 90%;
     }
     .skillimg{
-        max-width: 11.8vh;
-        max-height: 11.8vh;
+        max-width: 10vh;
+        max-height: 10vh;
     }
     .expanded{
-        width: 71vh;
-        height: 43.7vh;
+        width: 60vh;
+        height: 37vh;
+    }
+    .showParagraph{
+        position: relative;
+        top: 10%;
+        font-size: 1.1em;
     }
 }
 @media (max-width: 21in) and (min-width: 19.01in){
     #maintitle{
-        font-size: 8.4em;
+        font-size: 6em;
     }
     #introduction{
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
     #skills{
-        font-size: 4.2em;
-        left: 14vh;
+        font-size: 3em;
+        left: 10vh;
     }
     .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
-        width: 21vh;
-        height: 21vh;
-        top: 126%;
+        width: 15vh;
+        height: 15vh;
+        top: 90%;
     }
     .skillimg{
-        max-width: 14h;
-        max-height: 14vh;
+        max-width: 10vh;
+        max-height: 10vh;
     }
     .expanded{
-        width: 84vh;
-        height: 51.7.7vh;
+        width: 60vh;
+        height: 37vh;
+    }
+    .showParagraph{
+        position: relative;
+        top: 10%;
+        font-size: 1.1em;
     }
 }
 @media (max-width: 24in) and (min-width: 22.01in) {
-    #maintitle {
-        font-size: 9.6em;
+    #maintitle{
+        font-size: 6em;
     }
-    #introduction {
-        font-size: 4em;
+    #introduction{
+        font-size: 2.5em;
     }
-    #skills {
-        font-size: 4.8em;
-        left: 15.4vh;
+    #skills{
+        font-size: 3em;
+        left: 10vh;
     }
     .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
-        width: 23.1vh;
-        height: 23.1vh;
-        top: 141.125%;
+        width: 15vh;
+        height: 15vh;
+        top: 90%;
     }
-    .skillimg {
-        max-width: 15.4vh;
-        max-height: 15.4vh;
+    .skillimg{
+        max-width: 10vh;
+        max-height: 10vh;
     }
-    .expanded {
-        width: 93.6vh;
-        height: 57.3333vh;
+    .expanded{
+        width: 60vh;
+        height: 37vh;
+    }
+    .showParagraph{
+        position: relative;
+        top: 10%;
+        font-size: 1.1em;
     }
 }
 @media (max-width: 27in) and (min-width: 25.01in) {
-    #maintitle {
-        font-size: 10.8em;
+    #maintitle{
+        font-size: 6em;
     }
-    #introduction {
-        font-size: 4.5em;
+    #introduction{
+        font-size: 2.5em;
     }
-    #skills {
-        font-size: 5.4em;
-        left: 16.6vh;
+    #skills{
+        font-size: 3em;
+        left: 10vh;
     }
     .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
-        width: 25.3vh;
-        height: 25.3vh;
-        top: 156.25%;
+        width: 15vh;
+        height: 15vh;
+        top: 90%;
     }
-    .skillimg {
-        max-width: 16.6vh;
-        max-height: 16.6vh;
+    .skillimg{
+        max-width: 10vh;
+        max-height: 10vh;
     }
-    .expanded {
-        width: 102.9vh;
-        height: 62.2222vh;
+    .expanded{
+        width: 60vh;
+        height: 37vh;
+    }
+    .showParagraph{
+        position: relative;
+        top: 10%;
+        font-size: 1.1em;
     }
 }
 @media (max-width: 30in) and (min-width: 28.01in) {
-    #maintitle {
-        font-size: 12em;
-    }
-    #introduction {
-        font-size: 5em;
-    }
-    #skills {
+    #maintitle{
         font-size: 6em;
-        left: 18vh;
+    }
+    #introduction{
+        font-size: 2.5em;
+    }
+    #skills{
+        font-size: 3em;
+        left: 10vh;
     }
     .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
-        width: 27.4vh;
-        height: 27.4vh;
-        top: 171.375%;
+        width: 15vh;
+        height: 15vh;
+        top: 90%;
     }
-    .skillimg {
-        max-width: 18vh;
-        max-height: 18vh;
+    .skillimg{
+        max-width: 10vh;
+        max-height: 10vh;
     }
-    .expanded {
-        width: 112.2vh;
-        height: 67.1111vh;
+    .expanded{
+        width: 60vh;
+        height: 37vh;
+    }
+    .showParagraph{
+        position: relative;
+        top: 10%;
+        font-size: 1.1em;
     }
 }
 @media (max-width: 40in) and (min-width: 30.01in) {
-    #maintitle {
-        font-size: 16em;
+    #maintitle{
+        font-size: 6em;
     }
-    #introduction {
-        font-size: 6.67em;
+    #introduction{
+        font-size: 2.5em;
     }
-    #skills {
-        font-size: 8em;
-        left: 22vh;
+    #skills{
+        font-size: 3em;
+        left: 10vh;
     }
     .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
-        width: 36.4vh;
-        height: 36.4vh;
-        top: 212.5%;
+        width: 15vh;
+        height: 15vh;
+        top: 90%;
     }
-    .skillimg {
-        max-width: 22vh;
-        max-height: 22vh;
+    .skillimg{
+        max-width: 10vh;
+        max-height: 10vh;
     }
-    .expanded {
-        width: 132vh;
-        height: 83.3333vh;
+    .expanded{
+        width: 60vh;
+        height: 37vh;
+    }
+    .showParagraph{
+        position: relative;
+        top: 10%;
+        font-size: 1.1em;
     }
 }
 @media (max-width: 50in) and (min-width: 40.01in) {
-    #maintitle {
-        font-size: 20em;
+    #maintitle{
+        font-size: 6em;
     }
-    #introduction {
-        font-size: 8.33em;
+    #introduction{
+        font-size: 2.5em;
     }
-    #skills {
-        font-size: 10em;
-        left: 25vh;
+    #skills{
+        font-size: 3em;
+        left: 10vh;
     }
     .contractedHtml, .contractedCss, .contractedJavascript, .expandedToContractedCss, .expandedToContractedHtml, .expandedToContractedJavascript{
-        width: 45.5vh;
-        height: 45.5vh;
-        top: 253.125%;
+        width: 15vh;
+        height: 15vh;
+        top: 90%;
     }
-    .skillimg {
-        max-width: 25vh;
-        max-height: 25vh;
+    .skillimg{
+        max-width: 10vh;
+        max-height: 10vh;
     }
-    .expanded {
-        width: 150vh;
-        height: 100vh;
+    .expanded{
+        width: 60vh;
+        height: 37vh;
+    }
+    .showParagraph{
+        position: relative;
+        top: 10%;
+        font-size: 1.1em;
     }
 }
