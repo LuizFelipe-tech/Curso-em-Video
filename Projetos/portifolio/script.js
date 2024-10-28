@@ -12,6 +12,7 @@ var imgJavascript = document.querySelector('#javascriptimg')
 var paragraphJavascript = document.querySelector('#paragraphJavascript')
 var closeButtonJavascript = document.querySelector('#closeButtonJavascript')
 var greyBackground = document.querySelector('#greyBackground')
+var introduction = document.getElementById('introduction')
 var isElementContracted = true;
 var isWhichElement = undefined
 var isHtmlContracting = false
@@ -27,12 +28,50 @@ closeButtonJavascript.classList.add('hiddenCloseButton')
 paragraphHtml.classList.add('hiddenParagraph')
 paragraphCss.classList.add('hiddenParagraph')
 paragraphJavascript.classList.add('hiddenParagraph')
-greyBackground.classList.add('greyBackgroundOff')
+greyBackground.classList.add('hiddenGreyBackground')
 //Initial events settings || Configuração inicial de eventos
 divHtml.addEventListener('click',() => clickHappened(divHtml, closeButtonHtml, paragraphHtml));
 divCss.addEventListener('click', ()=> clickHappened(divCss, closeButtonCss, paragraphCss))
 divJavascript.addEventListener('click', ()=> clickHappened(divJavascript, closeButtonJavascript, paragraphJavascript))
+// Função para calcular o DPI do dispositivo
+function calcularDPI() {
+    const div = document.createElement('div');
+    div.style.width = '1in'; // Define o tamanho da div para 1 polegada
+    div.style.height = '1in';
+    div.style.position = 'absolute';
+    div.style.top = '-100%'; // Esconde a div fora da tela
+  
+    document.body.appendChild(div);
+    const dpi = div.offsetWidth; // O offsetWidth vai dar a medida em pixels
+    document.body.removeChild(div); // Remove a div depois de medir
+    return dpi;
+  }
+  
+  // Função para calcular e exibir o tamanho da janela e da tela
+  function calcularTamanhoEmPolegadas() {
+    const DPI = calcularDPI(); // Calcula o DPI dinamicamente
+  
+    // Obtém as dimensões da janela (área visível da página)
+    const larguraJanelaPx = window.innerWidth;
+    const alturaJanelaPx = window.innerHeight;
+  
+    // Obtém as dimensões da tela (tamanho total da tela do dispositivo)
+    const larguraTelaPx = window.screen.width;
+    const alturaTelaPx = window.screen.height;
+  
+    // Calcula o tamanho em polegadas
+    const larguraJanelaIn = (larguraJanelaPx / DPI).toFixed(2);
+    const alturaJanelaIn = (alturaJanelaPx / DPI).toFixed(2);
+  
+    const larguraTelaIn = (larguraTelaPx / DPI).toFixed(2);
+    const alturaTelaIn = (alturaTelaPx / DPI).toFixed(2);
 
+    //introduction.innerHTML = `DPI: ${DPI}, tamanho da janela: ${larguraJanelaIn} x ${alturaJanelaIn}, Tamanho da janela: ${larguraTelaIn} x ${alturaTelaIn}`
+  }
+  
+  // Função para rodar a cada 2 segundos
+  setInterval(calcularTamanhoEmPolegadas, 1);
+  
 
 function clickHappened(element, closeButton, paragraphElement) {
     switch (element){
@@ -56,8 +95,8 @@ function clickHappened(element, closeButton, paragraphElement) {
                 }, 2001)
                 paragraphElement.classList.remove('showParagraph')
                 paragraphElement.classList.add('hiddenParagraph')
-                greyBackground.classList.remove('greyBackgroundOn')
-                greyBackground.classList.add('greyBackgroundOff')
+                greyBackground.classList.remove('showGreyBackground')
+                greyBackground.classList.add('hiddenGreyBackground')
                 isElementContracted = true
                 }
                 //Reset Html to its original form || Restaura o Html para sua posição inicial
@@ -68,8 +107,8 @@ function clickHappened(element, closeButton, paragraphElement) {
                         closeButton.classList.remove('hiddenCloseButton')
                         closeButton.classList.add('ShowedCloseButton')
                     }, 1500);
-                    greyBackground.classList.remove('greyBackgroundOff')
-                    greyBackground.classList.add('greyBackgroundOn')
+                    greyBackground.classList.remove('hiddenGreyBackground')
+                    greyBackground.classList.add('showGreyBackground')
                     element.classList.remove(`contractedHtml`)
                     element.classList.add('expanded')
                     isElementContracted = false                      
@@ -93,8 +132,8 @@ function clickHappened(element, closeButton, paragraphElement) {
         }, 2001)
         paragraphElement.classList.remove('showParagraph')
         paragraphElement.classList.add('hiddenParagraph')
-        greyBackground.classList.remove('greyBackgroundOn')
-        greyBackground.classList.add('greyBackgroundOff')
+        greyBackground.classList.remove('showGreyBackground')
+        greyBackground.classList.add('hiddenGreyBackground')
         isElementContracted = true
         }
         if (isElementContracted == true) {
@@ -106,8 +145,8 @@ function clickHappened(element, closeButton, paragraphElement) {
                 closeButton.classList.remove('hiddenCloseButton')
                 closeButton.classList.add('ShowedCloseButton')
             }, 1500);
-            greyBackground.classList.remove('greyBackgroundOff')
-            greyBackground.classList.add('greyBackgroundOn')
+            greyBackground.classList.remove('hiddenGreyBackground')
+            greyBackground.classList.add('showGreyBackground')
             element.classList.remove(`contractedCss`)
             element.classList.add('expanded')
             isElementContracted = false                      
@@ -131,8 +170,8 @@ function clickHappened(element, closeButton, paragraphElement) {
         }, 2001)
         paragraphElement.classList.remove('showParagraph')
         paragraphElement.classList.add('hiddenParagraph')
-        greyBackground.classList.remove('greyBackgroundOn')
-        greyBackground.classList.add('greyBackgroundOff')
+        greyBackground.classList.remove('showGreyBackground')
+        greyBackground.classList.add('hiddenGreyBackground')
         isElementContracted = true
         }
         if (isElementContracted == true) {
@@ -144,8 +183,8 @@ function clickHappened(element, closeButton, paragraphElement) {
                 closeButton.classList.remove('hiddenCloseButton')
                 closeButton.classList.add('ShowedCloseButton')
             }, 1500);
-            greyBackground.classList.remove('greyBackgroundOff')
-            greyBackground.classList.add('greyBackgroundOn')
+            greyBackground.classList.remove('hiddenGreyBackground')
+            greyBackground.classList.add('showGreyBackground')
             element.classList.remove(`contractedJavascript`)
             element.classList.add('expanded')
             isElementContracted = false                      
