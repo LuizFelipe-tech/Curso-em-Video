@@ -1,4 +1,25 @@
 //Initial variable settings || Declaração inicial de variáveis
+if(navigator.userAgentData){
+    navigator.userAgentData.getHighEntropyValues(['platform']).then(data => {
+        const platform = data.platform
+        switch(platform){
+            case 'Chrome OS':
+            case'Linux':
+            case 'MacOs':
+            case 'Windows':
+                alert('Desktop')
+                break;
+            case 'Android':
+            case 'iOS':
+                alert('Mobile')
+            break;
+            default:
+                alert('Outro' + platform)
+        }
+    }).catch(console.error('Erro ao carregar as informações do usuário'))
+}else{
+    alert('Não suportado')
+}
 var divHtml = document.querySelector('#html');
 var imgHtml = document.querySelector('#imghtml');
 var paragraphHtml = document.querySelector('#paragraphHtml')
@@ -66,7 +87,7 @@ function calcularDPI() {
     const larguraTelaIn = (larguraTelaPx / DPI).toFixed(2);
     const alturaTelaIn = (alturaTelaPx / DPI).toFixed(2);
 
-    //introduction.innerHTML = `DPI: ${DPI}, tamanho da janela: ${larguraJanelaIn} x ${alturaJanelaIn}, Tamanho da janela: ${larguraTelaIn} x ${alturaTelaIn}`
+    introduction.innerHTML = `DPI: ${DPI}, tamanho da janela: ${larguraJanelaIn} x ${alturaJanelaIn}, Tamanho da janela: ${larguraTelaIn} x ${alturaTelaIn}`
   }
   
   // Função para rodar a cada 2 segundos
