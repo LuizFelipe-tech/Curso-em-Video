@@ -1,25 +1,5 @@
 //Initial variable settings || Declaração inicial de variáveis
-if(navigator.userAgentData){
-    navigator.userAgentData.getHighEntropyValues(['platform']).then(data => {
-        const platform = data.platform
-        switch(platform){
-            case 'Chrome OS':
-            case'Linux':
-            case 'MacOs':
-            case 'Windows':
-                alert('Desktop')
-                break;
-            case 'Android':
-            case 'iOS':
-                alert('Mobile')
-            break;
-            default:
-                alert('Outro' + platform)
-        }
-    }).catch(console.error('Erro ao carregar as informações do usuário'))
-}else{
-    alert('Não suportado')
-}
+var linkStyle = document.querySelector('#linkStyle')
 var divHtml = document.querySelector('#html');
 var imgHtml = document.querySelector('#imghtml');
 var paragraphHtml = document.querySelector('#paragraphHtml')
@@ -39,6 +19,32 @@ var isWhichElement = undefined
 var isHtmlContracting = false
 var isCssContracting = false
 var isJavascriptContracting = false
+if(navigator.userAgentData){
+    navigator.userAgentData.getHighEntropyValues(['platform']).then(data => {
+        const platform = data.platform
+        switch(platform){
+            case 'Chrome OS':
+            case'Linux':
+            case 'MacOs':
+            case 'Windows':
+                linkStyle.setAttribute('rel', 'stylesheet')
+                linkStyle.setAttribute('href', 'style.css')
+                console.log(platform)
+                break;
+            case 'Android':
+            case 'iOS':
+                linkStyle.setAttribute('rel', 'stylesheet')
+                linkStyle.setAttribute('href', 'mobile.css')
+                console.log('executado', platform)
+                break;
+            default:
+                console.log(platform)
+                break;
+        }
+    }).catch(erro => console.error('Plataforma não identificada', erro))
+}else{
+    alert('Não suportado')
+}
 //Initial style settings || Configuração de estilos iniciais
 divHtml.classList.add('contractedHtml')
 divCss.classList.add('contractedCss')
@@ -52,8 +58,8 @@ paragraphJavascript.classList.add('hiddenParagraph')
 greyBackground.classList.add('hiddenGreyBackground')
 //Initial events settings || Configuração inicial de eventos
 divHtml.addEventListener('click',() => clickHappened(divHtml, closeButtonHtml, paragraphHtml));
-divCss.addEventListener('click', ()=> clickHappened(divCss, closeButtonCss, paragraphCss))
-divJavascript.addEventListener('click', ()=> clickHappened(divJavascript, closeButtonJavascript, paragraphJavascript))
+divCss.addEventListener('click', () => clickHappened(divCss, closeButtonCss, paragraphCss))
+divJavascript.addEventListener('click', () => clickHappened(divJavascript, closeButtonJavascript, paragraphJavascript))
 // Função para calcular o DPI do dispositivo
 function calcularDPI() {
     const div = document.createElement('div');
