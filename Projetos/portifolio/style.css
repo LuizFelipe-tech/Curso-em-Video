@@ -103,9 +103,10 @@ main{
     position: relative;
     max-height: 10vh;
     max-width: 10vh;
-    top: 10%;
+    top: 0%;
     display: block;
     margin: auto;
+    margin-bottom: 10px;
 }
 .expanded{
     position: absolute;
@@ -141,19 +142,18 @@ main{
 .ShowedCloseButton{
     width: 5vh;
     height: 5vh;
-    position: relative;
+    position: absolute;
     left: 90%;
     bottom: 30%;
     display: inline-block;
     cursor: pointer;
+    top: 1%;
 }
 .hiddenParagraph{
-    top: -20%;
     display: none;
 }
 .showParagraph{
     display: inline;
-    padding: 10%;
 }
 .contractedHtml{
     position: absolute;
@@ -236,6 +236,23 @@ main{
     margin: 0;
     top: 10vh;
 }
+#languageskills{
+    color: white;
+    font-size: 3em;
+    font-family: Exo, Arial, Helvetica, sans-serif;
+    padding: 3vh;
+}
+#secao3{
+    margin-top: 35.4%;
+    background-image: url('image/canadaflag.webp');
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    background-size: 100%;
+}
+#paragraphLanguage{
+    color: white;
+    padding-left: 3vh;
+}
 #introduction{
     position: relative;
     color: #bf81ff;
@@ -244,7 +261,7 @@ main{
     text-align: center;
     top: 10vh;
 }
-#skills{
+#codingSkills{
     position: relative;
     color: #bf81ff;
     font-family: Exo, Arial, Helvetica, sans-serif;
@@ -282,6 +299,10 @@ main{
         font-size: 0.2em;
         color: black;
     }
+    .ShowedCloseButton{
+        width: 3vh;
+        height: 3vh;
+    }
 }
 @media (max-width: 7in) and (min-width: 4.01in){
     #maintitle{
@@ -311,6 +332,10 @@ main{
         font-size: 0.4em;
         color: black;
     }
+    .ShowedCloseButton{
+        width: 3vh;
+        height: 3vh;
+    }
 }
 @media (max-width: 10in) and (min-width: 7.01in){
     #maintitle{
@@ -329,13 +354,17 @@ main{
         top: 70%;
     }
     .skillimg{
-        max-width: 6.1vh;
-        max-height: 6.1vh;
+        max-width: 6vh;
+        max-height: 6vh;
     }
     .expanded{
         max-width: 50vh;
         max-height: 27vh;
     }
+    /*.ShowedCloseButton{
+        width: 4vh;
+        height: 4vh;
+    }*/
 }
 @media (max-width: 13in) and (min-width: 10.01in){
     #maintitle{
@@ -360,6 +389,10 @@ main{
     .expanded{
         max-width: 48vh;
         max-height: 29.5vh;
+    }
+    .ShowedCloseButton{
+        width: 4vh;
+        height: 4vh;
     }
 }
 @media (max-width: 16in) and (min-width: 13.01in){
