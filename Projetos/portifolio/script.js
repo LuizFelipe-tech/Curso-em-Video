@@ -93,7 +93,7 @@ function calcularDPI() {
     const larguraTelaIn = (larguraTelaPx / DPI).toFixed(2);
     const alturaTelaIn = (alturaTelaPx / DPI).toFixed(2);
 
-    introduction.innerHTML = `DPI: ${DPI}, tamanho da janela: ${larguraJanelaIn} x ${alturaJanelaIn}, Tamanho da janela: ${larguraTelaIn} x ${alturaTelaIn}`
+    //introduction.innerHTML = `DPI: ${DPI}, tamanho da janela: ${larguraJanelaIn} x ${alturaJanelaIn}, Tamanho da janela: ${larguraTelaIn} x ${alturaTelaIn}`
   }
   
   // Função para rodar a cada 2 segundos
