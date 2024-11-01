@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
     height: 100vh;
-    background-color: black;
+    background-color: #d80621;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -91,6 +91,10 @@ main{
 #linkedin{
     right: 3vh;
     top: 3vh
+}
+#github{
+    top: 3vh;
+    right: 11vh;
 }
 #download{
     right: 7vh;
@@ -237,21 +241,27 @@ main{
     top: 10vh;
 }
 #languageskills{
-    color: white;
+    color: #bf81ff;
     font-size: 3em;
     font-family: Exo, Arial, Helvetica, sans-serif;
     padding: 3vh;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 #secao3{
-    margin-top: 35.4%;
+    margin-top: 70vh;
     background-image: url('image/canadaflag.webp');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: cover;
     background-size: 100%;
+    margin-bottom: 1vh;
+    height: 30vh;
 }
 #paragraphLanguage{
-    color: white;
+    color: rgb(0, 0, 0);
     padding-left: 3vh;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #introduction{
     position: relative;
@@ -270,6 +280,68 @@ main{
     left: 10vh;
     word-wrap: break-word;
     white-space: normal;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#divLanguage
+{
+    background-color: white;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    border-radius: 1vh;
+    padding-top: 1vh;
+}
+#h1Projetos{
+    color: #bf81ff;
+    font-family: Exo, Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    word-wrap: break-word;
+    white-space: normal;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin: 1vh;
+}
+#logoM{
+    width: 5vh;
+    height: 5vh;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#textM{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: red;
+}
+#divProject{
+    background-color: white;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 1vh;
+    position: relative;
+    text-align: center;
+    width: 21vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+#divProject:hover{
+    transition-duration: 0.5s;
+    box-shadow: 5px 5px 4px 5px rgba(0, 0, 0, 0.452);
+}
+#linkMistube{
+    text-decoration: none;
+}
+footer{
+    margin-top: 25%;
+    background-color: purple;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    text-align: center;
+    color: wheat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.linkLicense{
+    color: wheat;
 }
 @media (max-width: 4in){
     #maintitle{
@@ -397,7 +469,7 @@ main{
 }
 @media (max-width: 16in) and (min-width: 13.01in){
     #maintitle{
-        font-size: 6em;
+        font-size: 4.9em;
     }
     #introduction{
         font-size: 2.5em;
