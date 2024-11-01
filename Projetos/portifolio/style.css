@@ -408,6 +408,12 @@ footer{
         width: 3vh;
         height: 3vh;
     }
+    footer{
+        margin-top: 250%;
+    }
+    #secao3{
+        height: 90vh;
+    }
 }
 @media (max-width: 10in) and (min-width: 7.01in){
     #maintitle{
@@ -432,6 +438,12 @@ footer{
     .expanded{
         max-width: 50vh;
         max-height: 27vh;
+    }
+    footer{
+        margin-top: 120%;
+    }
+    #secao3{
+        height: 65vh;
     }
     /*.ShowedCloseButton{
         width: 4vh;
@@ -466,6 +478,12 @@ footer{
         width: 4vh;
         height: 4vh;
     }
+    footer{
+        margin-top: 80%;
+    }
+    #secao3{
+        height: 50vh;
+    }
 }
 @media (max-width: 16in) and (min-width: 13.01in){
     #maintitle{
@@ -496,6 +514,12 @@ footer{
         top: 10%;
         font-size: 1.1em;
     }
+    footer{
+        margin-top: 45%;
+    }
+    #secao3{
+        height: 40vh;
+    }
 }
 @media (max-width: 19in) and (min-width: 16.01in){
     #maintitle{
@@ -525,6 +549,12 @@ footer{
         position: relative;
         top: 10%;
         font-size: 1.1em;
+    }
+    footer{
+        margin-top: 30%;
+    }
+    #secao3{
+        height: 35vh;
     }
 }
 @media (max-width: 21in) and (min-width: 19.01in){
