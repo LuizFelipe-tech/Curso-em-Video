@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th{
+            background-color: bisque;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        tbody tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        td:hover{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <table>
+        <caption>Características dos países do mundo</caption>
+        <thead>
+            <tr>
+                <th scope="col">País</th>
+                <th scope="col">Capital</th>
+                <th scope="col">Continente</th>
+                <th scope="col">População (Aprox.)</th>
+                <th scope="col">Área (Km²)</th>
+                <th scope="col">Idioma(s) Oficial(is)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Brasil</td>
+                <td>Brasília</td>
+                <td>América do Sul</td>
+                <td>215 Milhões</td>
+                <td>8.515.767</td>
+                <td>Português</td>
+            </tr>
+            <tr>
+                <td>Japão</td>
+                <td>Tóquio</td>
+                <td>Ásia</td>
+                <td>125 Milhões</td>
+                <td>377.975</td>
+                <td>Japonês</td>
+            </tr>
+            <tr>
+                <td>Alemanha</td>
+                <td>Berlim</td>
+                <td>Europa</td>
+                <td>84 Milhões</td>
+                <td>357.588</td>
+                <td>Alemão</td>
+            </tr>
+            <tr>
+                <td>Nigéria</td>
+                <td>Abuja</td>
+                <td>África</td>
+                <td>218 Milhões</td>
+                <td>923.768</td>
+                <td>Inglês</td>
+            </tr>
+            <tr>
+                <td>Canadá</td>
+                <td>Ottawa</td>
+                <td>América do Norte</td>
+                <td>38 Milhões</td>
+                <td>9.984.670</td>
+                <td>Inglês, Francês</td>
+            </tr>
+            <tr>
+                <td>Austrália</td>
+                <td>Canberra</td>
+                <td>Oceania</td>
+                <td>26 Milhões</td>
+                <td>7.692.024</td>
+                <td>Inglês</td>
+            </tr>
+            <tr>
+                <td>África do Sul</td>
+                <td>Pretória</td>
+                <td>África</td>
+                <td>60 Milhões</td>
+                <td>1.221.037</td>
+                <td>11 idiomas</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
